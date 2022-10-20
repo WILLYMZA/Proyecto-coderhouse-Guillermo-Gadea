@@ -1,0 +1,612 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat,sans-serif;
+}
+
+/*****Mobile First*****/
+
+.container{ 
+    width: 576px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr,1fr;
+    grid-template-rows: repeat (10,1fr);
+    grid-template-areas: 
+    "box-banner"
+    "box-title"
+    "box-info"
+    "box-note"
+    "box-not1"
+    "box-not2"
+    "box-not3"
+    "box-more"
+    "box-footer" 
+    "box-social"
+;
+}
+
+.box-nav {
+    grid-area: box-nav;
+    background-color: black;
+    padding-bottom: 10px;
+}
+
+.box-nav ul {
+    display: flex;
+    width: 100%;
+    list-style: none;
+}
+
+.box-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+    position: relative;
+    padding: 0 10px;
+}
+
+.box-nav a:after{
+    content: "";
+    position: absolute;
+    background-color: gold;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.box-nav a:hover::after{
+    width: 100%;
+}
+
+.box-banner {
+    grid-area: box-banner;
+    padding-bottom: 10px;
+    background-color: white;
+    
+}
+.box-banner img {
+   justify-content: center;
+}
+.box-title {
+    grid-area: box-title;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.box-title h1 {
+    text-align: center;
+    
+    
+}
+.box-info {
+    grid-area: box-info;
+    background-color: rgb(242, 58, 58);
+    
+
+}
+.box-info p {
+    text-align: justify;
+    padding: 10px;
+    
+}
+.box-note {
+    grid-area: box-note;
+    background-color: rgb(97, 97, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}  
+.box-note h2 {
+    text-align: center;
+    padding: 10px;
+}
+.box-not1 {
+    grid-area: box-not1;
+    background-color: rgb(109, 44, 169);
+
+}
+.box-not1 h2 {
+    padding: 10px;
+}
+.box-not1 p {
+    padding: 10px;
+    text-align: justify;
+}
+.box-not2 {
+    grid-area: box-not2;
+    background-color: rgb(166, 239, 58);
+
+}
+.box-not2 h2 {
+    text-align: center;
+    padding: 10px;
+}
+.box-not2 p {
+    padding: 10px;
+    text-align: justify;
+}
+.box-not3 {
+    grid-area: box-not3;
+    background-color: rgb(100, 96, 96);
+
+}
+.box-not3 h2 {
+    text-align: center;
+    padding: 10px;
+}
+.box-not3 p {
+    padding: 10px;
+    text-align: justify;
+}
+.box-more {
+    grid-area: box-more;
+    background-color: gold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.box-more h2 {
+    text-align: center;
+    
+}
+
+.box-footer {
+    grid-area: box-footer;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+.box-footer a {
+    text-decoration-style: none;
+
+}
+.box-social {
+    grid-area: box-social;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+
+}
+.box-social a {
+    text-decoration-style: none;
+}
+/*****TABLET*****/
+
+@media (min-width:768px){
+    .container {
+        width: 100%;
+        grid-template-columns: repeat(2,1fr); /*eje y*/
+        grid-template-rows: repeat(8,1fr); /*eje x*/
+        grid-template-areas: 
+        "box-banner box-banner"
+        "box-title box-title"
+        "box-info box-info"
+        "box-note box-note"
+        "box-not1 box-not2"
+        "box-not3 box-not3"
+        "box-more box-more"
+        "box-footer box-social"
+        ;
+    }
+nav{
+    height: 100%;
+}
+
+        .box-nav {
+            grid-area: box-nav;
+            height: 100%;
+            background-color: black;
+            padding-bottom: 10px;
+            
+        }
+        
+        .box-nav ul {
+            display: inline-table;
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .box-nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+            position: relative;
+            padding: 0 10px;
+        }
+        
+        .box-banner {
+            grid-area: box-banner;
+            padding-bottom: 10px;
+            background-color: white;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            
+        }
+        .box-banner img {
+           justify-content: center;
+        }
+        .box-title {
+            grid-area: box-title;
+            background-color: greenyellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+        .box-title h1 {
+            text-align: center;
+            
+            
+        }
+        .box-info {
+            grid-area: box-info;
+            background-color: rgb(242, 58, 58);
+            
+        
+        }
+        .box-info p {
+            text-align: justify;
+            padding: 10px;
+            
+        }
+        .box-note {
+            grid-area: box-note;
+            background-color: rgb(97, 97, 250);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }  
+        .box-note h2 {
+            text-align: center;
+            padding: 10px;
+        }
+        .box-not1 {
+            grid-area: box-not1;
+            background-color: rgb(109, 44, 169);
+        
+        }
+        .box-not1 h2 {
+            padding: 10px;
+        }
+        .box-not1 p {
+            padding: 10px;
+            text-align: justify;
+        }
+        .box-not2 {
+            grid-area: box-not2;
+            background-color: rgb(166, 239, 58);
+        
+        }
+        .box-not2 h2 {
+            text-align: center;
+            padding: 10px;
+        }
+        .box-not2 p {
+            padding: 10px;
+            text-align: justify;
+        }
+        .box-not3 {
+            grid-area: box-not3;
+            background-color: rgb(100, 96, 96);
+        
+        }
+        .box-not3 h2 {
+            text-align: center;
+            padding: 10px;
+        }
+        .box-not3 p {
+            padding: 10px;
+            text-align: justify;
+        }
+        .box-more {
+            grid-area: box-more;
+            background-color: gold;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        .box-more h2 {
+            text-align: center;
+            
+        }
+        
+        .box-footer {
+            grid-area: box-footer;
+            background-color: black;
+            color: white;
+            text-align: center;
+        
+        }
+        .box-footer a {
+            text-decoration-style: none;
+        
+        }
+        .box-social {
+            grid-area: box-social;
+            background-color: black;
+            color: white;
+            text-align: center;
+}
+}
+/*****DESKTOP*****/
+@media (min-width:992px){
+    .container {
+        width: 100%;
+        grid-template-columns: repeat(3,1fr); /*eje y*/
+        grid-template-rows: repeat(7,1fr); /*eje x*/
+        grid-template-areas:
+        "box-banner box-banner box-banner"
+        "box-title box-title box-title"
+        "box-info box-info box-info"
+        "box-note box-note box-note"
+        "box-not1 box-not2 box-not3"
+        "box-more box-more box-more"
+        "box-footer box-social box-social"
+        ;
+    }
+nav{
+    height: 100%;
+}
+
+        .box-nav {
+            grid-area: box-nav;
+            height: 100%;
+            background-color: black;
+            padding-bottom: 10px;
+            
+        }
+        
+        .box-nav ul {
+            display: inline-table;
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        
+        .box-nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+            position: relative;
+            padding: 0 10px;
+        }
+        
+        .box-banner {
+            grid-area: box-banner;
+            padding-bottom: 10px;
+            background-color: white;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            
+        }
+        .box-banner img {
+           justify-content: center;
+        }
+        .box-title {
+            grid-area: box-title;
+            background-color: greenyellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+        .box-title h1 {
+            text-align: center;
+            
+            
+        }
+        .box-info {
+            grid-area: box-info;
+            background-color: rgb(242, 58, 58);
+            
+        
+        }
+        .box-info p {
+            text-align: justify;
+            padding: 10px;
+            
+        }
+        .box-note {
+            grid-area: box-note;
+            background-color: rgb(97, 97, 250);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }  
+        .box-note h2 {
+            text-align: center;
+            padding: 10px;
+        }
+        .box-not1 {
+            grid-area: box-not1;
+            background-color: rgb(109, 44, 169);
+        
+        }
+        .box-not1 h2 {
+            padding: 10px;
+        }
+        .box-not1 p {
+            padding: 10px;
+            text-align: justify;
+        }
+        .box-not2 {
+            grid-area: box-not2;
+            background-color: rgb(166, 239, 58);
+        
+        }
+        .box-not2 h2 {
+            text-align: center;
+            padding: 10px;
+        }
+        .box-not2 p {
+            padding: 10px;
+            text-align: justify;
+        }
+        .box-not3 {
+            grid-area: box-not3;
+            background-color: rgb(100, 96, 96);
+        
+        }
+        .box-not3 h2 {
+            text-align: center;
+            padding: 10px;
+        }
+        .box-not3 p {
+            padding: 10px;
+            text-align: justify;
+        }
+        .box-more {
+            grid-area: box-more;
+            background-color: gold;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        .box-more h2 {
+            text-align: center;
+            
+        }
+        
+        .box-footer {
+            grid-area: box-footer;
+            background-color: black;
+            color: white;
+            text-align: center;
+        
+        }
+        .box-footer a {
+            text-decoration-style: none;
+        
+        }
+        .box-social {
+            grid-area: box-social;
+            background-color: black;
+            color: white;
+            text-align: center;
+}
+}
+
+/******PÁGINA NOSOTROS =)******/
+
+.container-nos{ 
+    width: 576px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr,1fr;
+    grid-template-rows: repeat (4,1fr);
+    grid-template-areas: 
+    "box-banner-nos"
+    "box-nos"
+    "box-footer"
+    "box-social"
+;
+}
+
+.box-banner-nos {
+    grid-area: box-banner-nos;
+    padding-bottom: 10px;
+    background-color: white;
+    
+}
+.box-banner-nos img {
+   justify-content: center;
+}
+
+ .box-nos {
+    grid-area: box-nos;
+    background-color: greenyellow;
+ }
+
+ /*************************TABLET*************************/
+
+ @media (min-width:768px){
+    .container-nos {
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas: 
+        "box-banner-nos box-banner-nos"
+        "box-nos box-nos"
+        "box-footer box-social"
+        ;
+    }
+    .box-nos {
+        grid-area: box-nos;
+        background-color: greenyellow;
+     }
+     .box-nos p {
+        font-size: 30px;
+     }
+     .box-banner-nos {
+        grid-area: box-banner-nos;
+        padding-bottom: 10px;
+        background-color: white;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        
+    }
+    .box-banner-nos img {
+       justify-content: center;
+    }
+}
+
+/*******************************DESKTOP******************************/
+
+@media (min-width:992px){
+    .container-nos {
+        width: 100%;
+        grid-template-columns: repeat(2,1fr); /*eje y*/
+        grid-template-rows: repeat(3,1fr); /*eje x*/
+        grid-template-areas: 
+        "box-banner-nos box-banner-nos"
+        "box-nos box-nos"
+        "box-footer box-social"
+        ;
+    }
+    .box-nos {
+        grid-area: box-nos;
+        background-color: greenyellow;
+     }
+     .box-nos p {
+        font-size: 30px;
+     }
+     .box-banner-nos {
+        grid-area: box-banner-nos;
+        padding-bottom: 10px;
+        background-color: white;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        
+    }
+    .box-banner-nos img {
+       justify-content: center;
+    }
+}

@@ -1,0 +1,34 @@
+@media (max-width:2560px) {
+.container-nos {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr,1fr;
+	grid-template-rows: repeat (2,auto);
+	grid-template-areas: "box-banner-nos" "box-nos";
+}
+.box-nos {
+	height: 700px;
+    grid-area: box-nos;
+    background-color: #e9e8e9;
+	padding: 50px;
+    p {
+		display: flex;
+		text-align: justify;
+        font-size: 30px;
+    }
+}
+.box-banner-nos {
+	background-color: #e9e8e9;
+	grid-area: box-banner-nos;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+    .box-banner-nos img {
+		background-color: #e9e8e9;
+	}
+}
+}

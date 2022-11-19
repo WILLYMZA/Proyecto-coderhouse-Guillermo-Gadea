@@ -39,21 +39,21 @@
 
 @media (max-width: 768px) {
   .container {
+    background-color: #e9e8e9;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr,1fr;
-    grid-template-rows: repeat 8, 1fr;
+    grid-template-columns: 1,auto;
+    grid-template-rows: repeat 8, auto;
     grid-template-areas: "box-banner" "box-title" "box-info" "box-note" "box-not1" "box-not2" "box-not3" "box-more"; }
   .box-banner {
     grid-area: box-banner;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center; }
     .box-banner img {
-      background-color: #e9e8e9;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+      width: 390px;
+      height: 130px;
+      background-color: #e9e8e9; }
   .box-title {
     grid-area: box-title;
     background-color: #e9e8e9;
@@ -133,10 +133,7 @@
   padding-bottom: 10px;
   background-color: #e9e8e9;
   display: flex;
-  align-content: center;
   justify-content: center; }
-  .box-banner img {
-    justify-content: center; }
 
 .box-title {
   grid-area: box-title;
@@ -338,7 +335,6 @@
     grid-area: box-banner-armapc;
     width: 100%;
     height: 100%;
-    padding-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -441,6 +437,230 @@
     background-color: gold;
     color: white;
     font-size: 25px; } }
+
+.container-partes {
+  min-height: 100vh;
+  background-color: #e9e8e9;
+  display: grid;
+  grid-template-columns: 1,auto;
+  grid-template-rows: repeat 12, auto;
+  grid-template-areas: "box-banner-partes" "box-titulo-partes" "box-titulopartes" "box-partes-lista" "box-partes-gpu" "box-partes-mother" "box-partes-cpu" "box-partes-ram" "box-partes-disipador" "box-partes-psu" "box-partes-hd" "box-partes-case"; }
+
+.box-banner-partes {
+  grid-area: box-banner-partes;
+  width: 100%;
+  height: 100%;
+  background-color: #e9e8e9;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.box-titulo-partes {
+  grid-area: box-titulo-partes;
+  display: flex;
+  background-color: gold;
+  color: white;
+  font-size: 18px;
+  justify-content: center;
+  align-content: center; }
+
+.box-titulopartes {
+  grid-area: box-titulopartes;
+  display: flex;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  justify-content: center;
+  align-content: center; }
+
+.box-partes-lista {
+  display: grid;
+  grid-area: box-partes-lista;
+  display: flex;
+  justify-content: center;
+  padding: 20px; }
+  .box-partes-lista li {
+    list-style: none;
+    padding: 5px; }
+
+.box-partes-gpu {
+  grid-area: box-partes-gpu;
+  padding: 20px;
+  text-align: justify; }
+  .box-partes-gpu h2 {
+    padding-bottom: 10px; }
+  .box-partes-gpu h3 {
+    padding: 10px; }
+  .box-partes-gpu li {
+    padding: 5px;
+    list-style: decimal; }
+  .box-partes-gpu .p2 {
+    padding-top: 20px; }
+
+.box-partes-mother {
+  grid-area: box-partes-mother;
+  padding: 20px;
+  text-align: justify; }
+  .box-partes-mother h2 {
+    padding-bottom: 10px; }
+
+.box-partes-cpu {
+  grid-area: box-partes-cpu;
+  padding: 20px;
+  text-align: justify; }
+  .box-partes-cpu h2 {
+    padding-bottom: 10px; }
+
+.box-partes-ram {
+  grid-area: box-partes-ram;
+  padding: 20px;
+  text-align: justify; }
+  .box-partes-ram h2 {
+    padding: 10px; }
+  .box-partes-ram h3 {
+    padding: 10px; }
+
+.box-partes-disipador {
+  grid-area: box-partes-disipador;
+  padding: 20px;
+  text-align: justify; }
+  .box-partes-disipador h2 {
+    padding: 20px; }
+  .box-partes-disipador h3 {
+    padding: 10px; }
+  .box-partes-disipador li {
+    padding: 10px; }
+  .box-partes-disipador p {
+    padding: 10px; }
+
+.box-partes-psu {
+  grid-area: box-partes-psu;
+  padding: 20px;
+  text-align: justify; }
+  .box-partes-psu h2 {
+    padding: 20px; }
+  .box-partes-psu h3 {
+    padding: 10px; }
+
+.box-partes-hd {
+  grid-area: box-partes-hd;
+  padding: 20px;
+  text-align: justify; }
+  .box-partes-hd h2 {
+    padding: 20px; }
+
+.box-partes-case {
+  grid-area: box-partes-case;
+  padding: 20px;
+  text-align: justify; }
+  .box-partes-case h2 {
+    padding: 20px; }
+  .box-partes-case li {
+    padding: 10px;
+    list-style: none; }
+
+@media (max-width: 2560px) {
+  .container-world {
+    min-height: 100vh;
+    background-color: #e9e8e9;
+    display: grid;
+    grid-template-columns: 1, auto;
+    grid-template-rows: repeat 7, auto;
+    grid-template-areas: "box-banner-world" "box-titulo-world" "box-not-google" "box-not-nvidia" "box-not-valve" "box-not-microsoft" "box-final"; }
+  .box-banner-world {
+    grid-area: box-banner-world;
+    padding-bottom: 10px;
+    background-color: #e9e8e9;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%; }
+  .box-titulo-world {
+    grid-area: box-titulo-world;
+    display: flex;
+    background-color: gold;
+    color: white;
+    font-size: 18px;
+    justify-content: center; }
+  .box-not-google {
+    grid-area: box-not-google;
+    padding: 20px; }
+    .box-not-google .img-stadia1 {
+      padding: 20px;
+      width: 600px;
+      height: 337px; }
+    .box-not-google p {
+      padding: 20px;
+      text-align: justify; }
+    .box-not-google .img-stadia2 {
+      padding: 20px;
+      width: 600px;
+      height: 314px; }
+  .box-not-nvidia {
+    grid-area: box-not-nvidia;
+    padding: 20px; }
+    .box-not-nvidia .img-nvidia1 {
+      display: flex;
+      padding: 20px;
+      width: 600px;
+      height: 337px; }
+    .box-not-nvidia .img-nvidia2 {
+      padding: 20px; }
+    .box-not-nvidia .img-nvidia3 {
+      padding: 20px;
+      width: 600px;
+      height: 317px; }
+    .box-not-nvidia p {
+      text-align: justify;
+      padding: 20px; }
+  .box-not-valve {
+    grid-area: box-not-valve;
+    padding: 20px; }
+    .box-not-valve h2 {
+      padding: 20px; }
+    .box-not-valve li {
+      padding: 5px;
+      list-style: none; }
+    .box-not-valve p {
+      text-align: justify;
+      padding: 10px; }
+    .box-not-valve .h3nro2 {
+      padding-bottom: 20px; }
+    .box-not-valve .img-valve1 {
+      padding: 20px;
+      width: 600px;
+      height: 337px; }
+    .box-not-valve .img-valve2 {
+      padding: 20px;
+      width: 600px;
+      height: 334px; }
+    .box-not-valve .img-valve3 {
+      padding: 20px;
+      width: 600px;
+      height: 337px; }
+  .box-not-microsoft {
+    grid-area: box-not-microsoft;
+    padding: 20px; }
+    .box-not-microsoft h2 {
+      padding: 20px; }
+    .box-not-microsoft h3 {
+      padding-bottom: 20px; }
+    .box-not-microsoft p {
+      text-align: justify;
+      padding: 10px; }
+    .box-not-microsoft .img-microsoft {
+      padding: 20px;
+      width: 600px;
+      height: 338px; }
+  .box-final {
+    grid-area: box-final;
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    justify-content: center;
+    align-content: center; } }
 
 /***************************MOBILE***************************/
 .footer {

@@ -1,23 +1,22 @@
 @media (max-width:768px) {
 .container {
+	background-color: #e9e8e9;
 	min-height: 100vh;
 	display: grid;
-	grid-template-columns: 1fr,1fr;
-	grid-template-rows: repeat (8,1fr);
+	grid-template-columns: 1,auto;
+	grid-template-rows: repeat (8,auto);
 	grid-template-areas: "box-banner" "box-title" "box-info" "box-note" "box-not1" "box-not2" "box-not3" "box-more";
 }
 .box-banner {
 	grid-area: box-banner;
-	width: 100%;
-	height: 100%;
 	padding-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	
 	img {
-		
+		width: 390px;
+		height: 130px;
 		background-color: #e9e8e9;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		
 	}
 }
 .box-title {

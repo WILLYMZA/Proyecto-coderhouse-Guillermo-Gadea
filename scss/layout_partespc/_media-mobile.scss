@@ -1,0 +1,156 @@
+.container-partes {
+	min-height: 100vh;
+    background-color: #e9e8e9;
+	display: grid;
+	grid-template-columns: 1,auto;
+	grid-template-rows: repeat (12,auto);
+	grid-template-areas: "box-banner-partes" "box-titulo-partes" "box-titulopartes" "box-partes-lista" "box-partes-gpu" "box-partes-mother" "box-partes-cpu" "box-partes-ram" "box-partes-disipador" "box-partes-psu" "box-partes-hd" "box-partes-case";
+}
+
+.box-banner-partes {
+    grid-area: box-banner-partes;
+    width: 100%;
+    height: 100%;
+    background-color: #e9e8e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+}
+
+.box-titulo-partes {
+    grid-area: box-titulo-partes;
+    display: flex;
+    background-color: gold;
+    color: white;
+    font-size: 18px;
+    justify-content: center;
+    align-content: center;
+}
+
+.box-titulopartes {
+    grid-area: box-titulopartes;
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    justify-content: center;
+    align-content: center;
+}
+
+.box-partes-lista {
+    display: grid;
+    
+    grid-area: box-partes-lista;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    
+    
+    li {
+        list-style:none;
+        padding: 5px;
+    };
+}
+
+.box-partes-gpu {
+    grid-area: box-partes-gpu;
+    padding: 20px;
+    text-align: justify;
+    h2 {
+        padding-bottom: 10px;
+    }
+    h3 {
+        padding: 10px;
+    }
+    li {
+        padding: 5px;
+        list-style:decimal;
+    }
+    .p2 {
+        padding-top: 20px;
+    }
+}
+
+.box-partes-mother {
+    grid-area: box-partes-mother;
+    padding: 20px;
+    text-align: justify;
+    h2 {
+        padding-bottom: 10px;
+    }
+}
+
+.box-partes-cpu {
+    grid-area: box-partes-cpu;
+    padding: 20px;
+    text-align: justify;
+    h2 {
+        padding-bottom: 10px;
+    }
+}
+
+.box-partes-ram {
+    grid-area: box-partes-ram;
+    padding: 20px;
+    text-align: justify;
+    h2 {
+        padding: 10px;
+    }
+    h3 {
+        padding: 10px;
+
+    }
+}
+
+.box-partes-disipador {
+    grid-area: box-partes-disipador;
+    padding: 20px;
+    text-align: justify;
+    h2 {
+        padding: 20px;
+    }
+    h3 {
+        padding: 10px;
+    }
+    li {
+        padding: 10px;
+        
+    }
+    p {
+        padding: 10px;
+    }
+}
+
+.box-partes-psu {
+    grid-area: box-partes-psu;
+    padding: 20px;
+    text-align: justify;
+    h2 {
+        padding: 20px;
+    }
+    h3 {
+        padding: 10px;
+    }
+}
+
+.box-partes-hd {
+    grid-area: box-partes-hd;
+    padding: 20px;
+    text-align: justify;
+    h2 {
+        padding: 20px;
+    }
+}
+
+.box-partes-case {
+    grid-area: box-partes-case;
+    padding: 20px;
+    text-align: justify;
+    h2 {
+        padding: 20px;
+    }
+    li {
+        padding: 10px;
+        list-style: none;
+    }
+}

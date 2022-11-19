@@ -1,0 +1,146 @@
+@media (max-width: 2560px) {
+  .container-world {
+    min-height: 100vh;
+    background-color: #e9e8e9;
+    display: grid;
+    grid-template-columns: 1, auto;
+    grid-template-rows: repeat (7, auto);
+    grid-template-areas:
+      "box-banner-world"
+      "box-titulo-world"
+      "box-not-google"
+      "box-not-nvidia"
+      "box-not-valve"
+      "box-not-microsoft"
+      "box-final";
+  }
+
+  .box-banner-world {
+    grid-area: box-banner-world;
+    padding-bottom: 10px;
+    background-color: #e9e8e9;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .box-titulo-world {
+    grid-area: box-titulo-world;
+    display: flex;
+    background-color: gold;
+    color: white;
+    font-size: 18px;
+    justify-content: center;
+  }
+
+  .box-not-google {
+    grid-area: box-not-google;
+    padding: 20px;
+    
+    .img-stadia1 {
+      padding: 20px;
+      width: 600px;
+      height: 337px;
+    }
+    p {
+      padding: 20px;
+      text-align: justify;
+    }
+    .img-stadia2 {
+      padding: 20px;
+      width: 600px;
+      height: 314px;
+    }
+  }
+
+  .box-not-nvidia {
+    grid-area: box-not-nvidia;
+    padding: 20px;
+    .img-nvidia1 {
+      display: flex;
+      padding: 20px;
+      width: 600px;
+      height: 337px;
+    }
+    .img-nvidia2 {
+      padding: 20px;
+    }
+    .img-nvidia3 {
+      padding: 20px;
+      width: 600px;
+      height: 317px;
+    }
+    p {
+      text-align: justify;
+      padding: 20px;
+    }
+  }
+
+  .box-not-valve {
+    grid-area: box-not-valve;
+    padding: 20px;
+    h2 {
+      padding: 20px;
+    }
+
+    li {
+      padding: 5px;
+      list-style: none;
+    }
+
+    p {
+      text-align: justify;
+      padding: 10px;
+    }
+    .h3nro2 {
+      padding-bottom: 20px;
+    }
+    .img-valve1 {
+      padding: 20px;
+      width: 600px;
+      height: 337px;
+    }
+    .img-valve2 {
+      padding: 20px;
+      width: 600px;
+      height: 334px;
+    }
+    .img-valve3 {
+      padding: 20px;
+      width: 600px;
+      height: 337px;
+    }
+  }
+
+  .box-not-microsoft {
+    grid-area: box-not-microsoft;
+    padding: 20px;
+    h2 {
+      padding: 20px;
+    }
+    h3 {
+      padding-bottom: 20px;
+    }
+    p {
+      text-align: justify;
+      padding: 10px;
+    }
+    .img-microsoft {
+      padding: 20px;
+      width: 600px;
+      height: 338px;
+    }
+  }
+
+  .box-final {
+    grid-area: box-final;
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    justify-content: center;
+    align-content: center;
+  }
+}
